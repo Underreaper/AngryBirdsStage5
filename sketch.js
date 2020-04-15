@@ -18,8 +18,8 @@ function setup(){
     world = engine.world;
 
 
-    ground = new Ground(600,height,1200,20);
-    platform = new Ground(150, 305, 300, 170);
+    ground = new Ground(300,365,1200,40);
+    platform = new Ground(0, 215, 300, 185);
 
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
@@ -74,4 +74,11 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    if(keyCode === 32){
+    slingshot.attach(bird.body); 
+
+   }
 }
